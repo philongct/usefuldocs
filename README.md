@@ -7,4 +7,4 @@ https://databricks.com/blog/2015/01/28/introducing-streaming-k-means-in-spark-1-
 http://fabiomaffioletti.me/blog/2014/04/15/distributed-transactions-multiple-databases-spring-boot-spring-data-jpa-atomikos/
 https://techannotation.wordpress.com/2015/07/21/spring-distributed-transaction-with-atomikos-and-activemq/
 https://developer.jboss.org/thread/194890
-https://blog.davincisoftware.sk/how-to-code-rules-in-drools
+http://blog.cloudera.com/blog/2015/11/how-to-build-a-complex-event-processing-app-on-apache-spark-and-drools/
