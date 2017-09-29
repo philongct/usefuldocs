@@ -16,3 +16,6 @@ http://blog.cloudera.com/blog/2015/11/how-to-build-a-complex-event-processing-ap
 
 https://www.digicert.com/code-signing/java-code-signing-guide.htm
 https://docs.oracle.com/cd/E19509-01/820-3503/ggezy/index.html
+
+
+https://www.intertech.com/Blog/spring-security-active-directory-ldap-example/
