@@ -20,3 +20,6 @@ https://docs.oracle.com/cd/E19509-01/820-3503/ggezy/index.html
 
 https://www.intertech.com/Blog/spring-security-active-directory-ldap-example/
 https://docs.spring.io/spring-security/site/docs/3.0.x/reference/ldap.html
+
+
+https://coligo.io/learn-vuex-by-building-notes-app/
