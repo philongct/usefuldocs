@@ -10,6 +10,7 @@ https://databricks.com/blog/2015/01/28/introducing-streaming-k-means-in-spark-1-
 
 https://stackoverflow.com/questions/8163582/spring-batch-steps-to-improve-performance
 
+https://spring.io/blog/2011/08/15/configuring-spring-and-jta-without-full-java-ee/
 http://fabiomaffioletti.me/blog/2014/04/15/distributed-transactions-multiple-databases-spring-boot-spring-data-jpa-atomikos/
 https://techannotation.wordpress.com/2015/07/21/spring-distributed-transaction-with-atomikos-and-activemq/
 https://developer.jboss.org/thread/194890
