@@ -28,3 +28,6 @@ https://docs.spring.io/spring-security/site/docs/3.0.x/reference/ldap.html
 https://coligo.io/learn-vuex-by-building-notes-app/
 
 http://blog.monkey.codes/how-to-use-jwt-and-oauth-with-spring-boot/
+
+https://emptysqua.re/blog/how-to-write-resilient-mongodb-applications/
+
