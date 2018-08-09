@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta, date
 from urllib.request import urlopen
 import json
 import threading
@@ -7,12 +7,16 @@ import shutil
 
 ########################## params ############################
 save_folder = 'C:/Stocks'
+
+# to_date is 23:59 today
+to_date = datetime.combine(date.today(), datetime.max.time())
+# Adjust from_date with timedelta(days=xxx)
+from_date = datetime.combine(to_date.date() - timedelta(days=1), datetime.min.time())
+
 # source vndirect or ssi
-# - vndirect contains data from {from_date} to {to_date}
 # - ssi contains data from 2009 to current date
+# - vndirect contains data from {from_date} to {to_date}. VNDirect is more precise than SSI
 source = 'ssi'
-from_date = datetime(2010, 1, 1)
-to_date = datetime(2018, 8, 7, 23, 59)
 ###############################################################
 
 # constants
@@ -21,7 +25,7 @@ STOCK_SYMBOLS_URL = 'https://finfoapi-hn.vndirect.com.vn/stocks'
 STOCK_DATA_VNDIRECT_URL = 'https://dchart-api.vndirect.com.vn/dchart/history?symbol={}&resolution=D&from={}&to={}'
 STOCK_DATA_SSI_URL = 'http://ivt.ssi.com.vn/Handlers/DownloadHandler.ashx?Download=1&Ticker={}'
 
-STORAGE = save_folder + '/' + from_date.strftime("%Y-%m-%d_%H%M") + ' ' + to_date.strftime("%Y-%m-%d_%H%M")
+STORAGE = '{}/{} {}'.format(save_folder, from_date.date(), to_date.date())
 
 N_THREADS = 4
 
@@ -119,7 +123,7 @@ if __name__== "__main__":
         'ssi': download_symbol_ssi
     }
 
-    download_f = download_functions.get(source, lambda s: 'Not implemented {}'.format(s))
+    download_f = download_functions.get(source, lambda s: print('Nope {}'.format(s)))
 
     with urlopen(STOCK_SYMBOLS_URL) as stocks_res:
         if stocks_res.status == 200:
@@ -127,4 +131,3 @@ if __name__== "__main__":
             stocks = json.loads(data)['data']
 
             download_stocks(stocks, download_f)
-
